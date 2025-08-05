@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz PNFT 2026 - 5° a 9°</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #003366, #0055aa);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 5px solid #ffd700;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .tab-button {
+            padding: 12px 16px;
+            background-color: #e0e0e0;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            transition: 0.3s;
+            min-width: 80px;
+            text-align: center;
+        }
+        .tab-button:hover {
+            background-color: #d0d0d0;
+        }
+        .tab-button.active {
+            background-color: #003366;
+            color: white;
+        }
+        .tab-content {
+            display: none;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .module {
+            margin-bottom: 25px;
+            border-left: 5px solid #003366;
+            padding-left: 15px;
+        }
+        .module h3 {
+            color: #003366;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #eef4ff;
+            font-weight: bold;
+            width: 25%;
+            min-width: 120px;
+        }
+        .area {
+            display: inline-block;
+            margin: 2px 5px;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            color: white;
+            font-weight: bold;
+        }
+        .apropiacion { background-color: #0055aa; }
+        .programacion { background-color: #28a745; }
+        .robotica { background-color: #fd7e14; }
+        .datos { background-color: #6f42c1; }
+        .ejes { background-color: #6c757d; }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 14px;
+            padding: 20px;
+        }
+        .qr {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.85em;
+            display: inline-block;
+        }
+        a {
+            color: #0055aa;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .tab-button {
+                min-width: auto;
+                font-size: 0.9em;
+                padding: 10px 12px;
+            }
+            th, td {
+                font-size: 0.85em;
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PROGRAMA NACIONAL DE FORMACIÓN TECNOLÓGICA</h1>
+        <p class="subtitle">Matriz de Planeamiento 2026 | Módulos Integradores (5° a 9°)</p>
+    </header>
+
+    <div class="container">
+        <!-- Pestañas -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('5')">5°</button>
+            <button class="tab-button" onclick="openTab('6')">6°</button>
+            <button class="tab-button" onclick="openTab('7')">7°</button>
+            <button class="tab-button" onclick="openTab('8')">8°</button>
+            <button class="tab-button" onclick="openTab('9')">9°</button>
+        </div>
+
+        <!-- Módulo 5° -->
+        <div id="5" class="tab-content" style="display: block;">
+            <div class="module">
+                <h3>Módulo: Cibermineros: navegando con seguridad y conocimiento</h3>
+                <table>
+                    <tr><th>Duración</th><td>8 semanas</td></tr>
+                    <tr>
+                        <th>Áreas integradas</th>
+                        <td>
+                            <span class="area apropiacion">Apropiación Tecnológica y Digital</span>
+                            <span class="area programacion">Programación y Algoritmos</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ejes transversales</th>
+                        <td>
+                            <span class="area ejes">Ciudadanía Digital</span>
+                            <span class="area ejes">Pensamiento Computacional</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RdA (SMARTT)</th>
+                        <td>Al finalizar el módulo, la persona estudiante analizará situaciones de riesgo en entornos digitales y aplicará estrategias de protección (autenticación, privacidad, netiqueta), utilizando un entorno de programación por bloques para crear una campaña interactiva de concientización, en 8 semanas, demostrando responsabilidad ética y pensamiento crítico.</td>
+                    </tr>
+                    <tr>
+                        <th>Indicadores de logro</th>
+                        <td>
+                            - Identifica riesgos en línea (grooming, ciberacoso, phishing).<br>
+                            - Aplica buenas prácticas de privacidad y seguridad.<br>
+                            - Usa comandos básicos de programación para crear un mensaje interactivo.<br>
+                            - Colabora en equipo para diseñar una solución.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes conceptuales</th>
+                        <td>Privacidad digital, huella digital, netiqueta, autenticación, phishing, grooming, ciberacoso, algoritmo, evento, condición.</td>
+                    </tr>
+                    <tr>
+                        <th>Saberes procedimentales</th>
+                        <td>
+                            - Analiza escenarios de riesgo.<br>
+                            - Configura privacidad en redes sociales.<br>
+                            - Usa entornos gráficos para programar (Scratch).<br>
+                            - Crea mensajes interactivos con condiciones.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes actitudinales</th>
+                        <td>
+                            - Responsabilidad en el uso de la tecnología.<br>
+                            - Empatía hacia otros usuarios.<br>
+                            - Colaboración en entornos digitales.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Metodología activa</th>
+                        <td>Aprendizaje Basado en Retos (Challenge)</td>
+                    </tr>
+                    <tr>
+                        <th>Recursos necesarios</th>
+                        <td>Computadora, internet, Scratch, guías de seguridad</td>
+                    </tr>
+                    <tr>
+                        <th>Alternativas de resiliencia</th>
+                        <td>Sin internet: usar casos impresos y dramatizaciones. Sin computadora: presentación oral con cartel.</td>
+                    </tr>
+                    <tr>
+                        <th>Producto final</th>
+                        <td>Campaña interactiva de seguridad digital (juego, animación o afiche)</td>
+                    </tr>
+                    <tr>
+                        <th>Evaluación</th>
+                        <td>Portafolio + rúbrica de campaña + coevaluación</td>
+                    </tr>
+                    <tr>
+                        <th>Hipervínculos</th>
+                        <td>
+                            <a href="https://recursos.mep.go.cr/2023/glosariopnft/app" target="_blank">Glosario PNFT</a> | 
+                            <a href="https://www.inteco.es/niños-y-jovenes" target="_blank">INTECO Jóvenes</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Código QR</th>
+                        <td><span class="qr">[QR5] Glosario PNFT</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Módulo 6° -->
+        <div id="6" class="tab-content">
+            <div class="module">
+                <h3>Módulo: Acelerando el aprendizaje III (complementario)</h3>
+                <table>
+                    <tr><th>Duración</th><td>6 semanas</td></tr>
+                    <tr>
+                        <th>Áreas integradas</th>
+                        <td>
+                            <span class="area apropiacion">Apropiación Tecnológica y Digital</span>
+                            <span class="area programacion">Programación y Algoritmos</span>
+                            <span class="area datos">Ciencia de Datos e IA</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ejes transversales</th>
+                        <td>
+                            <span class="area ejes">Pensamiento Computacional</span>
+                            <span class="area ejes">Emprendimiento</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RdA (SMARTT)</th>
+                        <td>Al finalizar el módulo, la persona estudiante aplicará herramientas digitales para organizar, representar y comunicar información sobre un tema de interés escolar, utilizando hojas de cálculo y entornos de programación, en 6 semanas, demostrando autonomía, creatividad y pensamiento algorítmico.</td>
+                    </tr>
+                    <tr>
+                        <th>Indicadores de logro</th>
+                        <td>
+                            - Organiza datos en hojas de cálculo.<br>
+                            - Crea gráficos simples (barras, pictogramas).<br>
+                            - Usa programación por bloques para presentar información.<br>
+                            - Aplica comandos básicos del sistema operativo.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes conceptuales</th>
+                        <td>Dato, tabla, gráfico, hoja de cálculo, nube, algoritmo, evento, condición, almacenamiento digital.</td>
+                    </tr>
+                    <tr>
+                        <th>Saberes procedimentales</th>
+                        <td>
+                            - Ingresa y organiza datos en Google Sheets o Excel.<br>
+                            - Crea gráficos a partir de datos.<br>
+                            - Usa Scratch para presentar información visual.<br>
+                            - Guarda archivos en la nube.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes actitudinales</th>
+                        <td>
+                            - Autonomía en el uso de herramientas.<br>
+                            - Creatividad en la presentación de información.<br>
+                            - Colaboración en equipo.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Metodología activa</th>
+                        <td>Aprendizaje Basado en Proyectos (ABP)</td>
+                    </tr>
+                    <tr>
+                        <th>Recursos necesarios</th>
+                        <td>Computadora, Google Workspace, Scratch, datos reales del aula</td>
+                    </tr>
+                    <tr>
+                        <th>Alternativas de resiliencia</th>
+                        <td>Sin internet: usar papel cuadriculado y lápiz. Sin computadora: presentación oral con dibujos.</td>
+                    </tr>
+                    <tr>
+                        <th>Producto final</th>
+                        <td>Informe digital o físico con datos, gráficos y presentación programada</td>
+                    </tr>
+                    <tr>
+                        <th>Evaluación</th>
+                        <td>Rúbrica de producto + lista de cotejo + autoevaluación</td>
+                    </tr>
+                    <tr>
+                        <th>Hipervínculos</th>
+                        <td>
+                            <a href="https://workspace.google.com" target="_blank">Google Workspace</a> | 
+                            <a href="https://scratch.mit.edu" target="_blank">Scratch</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Código QR</th>
+                        <td><span class="qr">[QR6] Tutoriales Google Sheets</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Módulo 7° -->
+        <div id="7" class="tab-content">
+            <div class="module">
+                <h3>Módulo: RoboAventuras (complementario)</h3>
+                <table>
+                    <tr><th>Duración</th><td>10 semanas</td></tr>
+                    <tr>
+                        <th>Áreas integradas</th>
+                        <td>
+                            <span class="area programacion">Programación y Algoritmos</span>
+                            <span class="area robotica">Computación Física y Robótica</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ejes transversales</th>
+                        <td>
+                            <span class="area ejes">Pensamiento Computacional</span>
+                            <span class="area ejes">Emprendimiento</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RdA (SMARTT)</th>
+                        <td>Al finalizar el módulo, la persona estudiante diseñará, programará y probará un prototipo robótico que resuelva un desafío sencillo (ej: seguir una línea, evitar obstáculos), utilizando un kit de robótica o simulador, en 10 semanas, aplicando estructuras de control (condiciones, ciclos) y demostrando perseverancia y pensamiento crítico.</td>
+                    </tr>
+                    <tr>
+                        <th>Indicadores de logro</th>
+                        <td>
+                            - Identifica sensores y actuadores.<br>
+                            - Programa movimientos y respuestas a estímulos.<br>
+                            - Usa condiciones y ciclos en su código.<br>
+                            - Documenta su proceso de diseño y prueba.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes conceptuales</th>
+                        <td>Sensor, actuador, microcontrolador, automatización, algoritmo, condición, ciclo, estructura de control.</td>
+                    </tr>
+                    <tr>
+                        <th>Saberes procedimentales</th>
+                        <td>
+                            - Ensambla un prototipo robótico.<br>
+                            - Programa en entornos como mBlock o Arduino.<br>
+                            - Prueba y ajusta su programa.<br>
+                            - Simula prototipos en Tinkercad.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes actitudinales</th>
+                        <td>
+                            - Perseverancia ante errores.<br>
+                            - Trabajo colaborativo.<br>
+                            - Creatividad en la solución de problemas.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Metodología activa</th>
+                        <td>Design Thinking</td>
+                    </tr>
+                    <tr>
+                        <th>Recursos necesarios</th>
+                        <td>Kit de robótica (Makeblock, Arduino), computadora, mBlock, Tinkercad</td>
+                    </tr>
+                    <tr>
+                        <th>Alternativas de resiliencia</th>
+                        <td>Sin kit: usar simulador Tinkercad. Sin computadora: maqueta física con lógica explicada.</td>
+                    </tr>
+                    <tr>
+                        <th>Producto final</th>
+                        <td>Prototipo robótico funcional o simulado</td>
+                    </tr>
+                    <tr>
+                        <th>Evaluación</th>
+                        <td>Portafolio + demostración + rúbrica técnica</td>
+                    </tr>
+                    <tr>
+                        <th>Hipervínculos</th>
+                        <td>
+                            <a href="https://www.tinkercad.com" target="_blank">Tinkercad</a> | 
+                            <a href="https://makeblock.com" target="_blank">Makeblock</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Código QR</th>
+                        <td><span class="qr">[QR7] Simulador de robótica</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Módulo 8° -->
+        <div id="8" class="tab-content">
+            <div class="module">
+                <h3>Módulo: Data Explorers: descifrando el mundo con datos</h3>
+                <table>
+                    <tr><th>Duración</th><td>8 semanas</td></tr>
+                    <tr>
+                        <th>Áreas integradas</th>
+                        <td>
+                            <span class="area datos">Ciencia de Datos e IA</span>
+                            <span class="area apropiacion">Apropiación Tecnológica y Digital</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ejes transversales</th>
+                        <td>
+                            <span class="area ejes">Pensamiento Computacional</span>
+                            <span class="area ejes">Ciudadanía Digital</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RdA (SMARTT)</th>
+                        <td>Al finalizar el módulo, la persona estudiante recopilará, organizará y visualizará datos sobre un tema social (salud, ambiente, educación), identificando tendencias y sesgos, utilizando herramientas digitales, en 8 semanas, demostrando pensamiento crítico y responsabilidad ética en el uso de la información.</td>
+                    </tr>
+                    <tr>
+                        <th>Indicadores de logro</th>
+                        <td>
+                            - Diseña y aplica una encuesta simple.<br>
+                            - Organiza datos en hojas de cálculo.<br>
+                            - Crea gráficos y dashboards básicos.<br>
+                            - Identifica sesgos en la presentación de datos.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes conceptuales</th>
+                        <td>Dato, encuesta, tabla, gráfico, tendencia, sesgo, visualización, big data, privacidad.</td>
+                    </tr>
+                    <tr>
+                        <th>Saberes procedimentales</th>
+                        <td>
+                            - Crea formularios digitales (Google Forms).<br>
+                            - Usa hojas de cálculo para análisis.<br>
+                            - Genera gráficos interactivos.<br>
+                            - Presenta hallazgos con ética.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes actitudinales</th>
+                        <td>
+                            - Rigor ético en el manejo de datos.<br>
+                            - Sensibilidad social.<br>
+                            - Precisión en la información.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Metodología activa</th>
+                        <td>Aprendizaje Basado en Retos</td>
+                    </tr>
+                    <tr>
+                        <th>Recursos necesarios</th>
+                        <td>Computadora, Google Forms, Google Sheets, DataWrapper</td>
+                    </tr>
+                    <tr>
+                        <th>Alternativas de resiliencia</th>
+                        <td>Sin internet: encuestas en papel, gráficos manuales. Sin computadora: presentación en cartulina.</td>
+                    </tr>
+                    <tr>
+                        <th>Producto final</th>
+                        <td>Informe con datos, gráficos y recomendaciones</td>
+                    </tr>
+                    <tr>
+                        <th>Evaluación</th>
+                        <td>Informe + presentación + rúbrica de visualización</td>
+                    </tr>
+                    <tr>
+                        <th>Hipervínculos</th>
+                        <td>
+                            <a href="https://forms.google.com" target="_blank">Google Forms</a> | 
+                            <a href="https://www.datawrapper.de" target="_blank">DataWrapper</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Código QR</th>
+                        <td><span class="qr">[QR8] Crea tu gráfico interactivo</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Módulo 9° -->
+        <div id="9" class="tab-content">
+            <div class="module">
+                <h3>Módulo: Innovadores Digitales: diseñando soluciones tecnológicas</h3>
+                <table>
+                    <tr><th>Duración</th><td>10 semanas</td></tr>
+                    <tr>
+                        <th>Áreas integradas</th>
+                        <td>
+                            <span class="area programacion">Programación y Algoritmos</span>
+                            <span class="area robotica">Computación Física y Robótica</span>
+                            <span class="area datos">Ciencia de Datos e IA</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Ejes transversales</th>
+                        <td>
+                            <span class="area ejes">Pensamiento Computacional</span>
+                            <span class="area ejes">Emprendimiento</span>
+                            <span class="area ejes">Ética Tecnológica</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>RdA (SMARTT)</th>
+                        <td>Al finalizar el módulo, la persona estudiante diseñará una solución tecnológica integradora (aplicación, prototipo, sistema automatizado) que resuelva un problema local, utilizando programación, robótica y/o análisis de datos, en 10 semanas, documentando su proceso con enfoque emprendedor y evaluando su impacto ético y social.</td>
+                    </tr>
+                    <tr>
+                        <th>Indicadores de logro</th>
+                        <td>
+                            - Identifica un problema comunitario.<br>
+                            - Propone una solución tecnológica.<br>
+                            - Usa herramientas digitales para prototipar.<br>
+                            - Evalúa el impacto ético de su solución.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes conceptuales</th>
+                        <td>Prototipo, algoritmo, sensor, automatización, emprendimiento, ética tecnológica, ciclo de diseño.</td>
+                    </tr>
+                    <tr>
+                        <th>Saberes procedimentales</th>
+                        <td>
+                            - Aplica el proceso de Design Thinking.<br>
+                            - Prototipa soluciones digitales o físicas.<br>
+                            - Programa estructuras complejas.<br>
+                            - Documenta su proceso de innovación.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Saberes actitudinales</th>
+                        <td>
+                            - Creatividad e innovación.<br>
+                            - Responsabilidad social.<br>
+                            - Perseverancia y trabajo en equipo.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Metodología activa</th>
+                        <td>Design Thinking + Aprendizaje Basado en Proyectos</td>
+                    </tr>
+                    <tr>
+                        <th>Recursos necesarios</th>
+                        <td>Computadora, kits de robótica, plataformas de programación, materiales reciclados</td>
+                    </tr>
+                    <tr>
+                        <th>Alternativas de resiliencia</th>
+                        <td>Sin tecnología: maquetas físicas con explicación lógica. Sin internet: uso de recursos impresos.</td>
+                    </tr>
+                    <tr>
+                        <th>Producto final</th>
+                        <td>Prototipo funcional o maqueta con documentación</td>
+                    </tr>
+                    <tr>
+                        <th>Evaluación</th>
+                        <td>Portafolio + exposición + rúbrica de innovación</td>
+                    </tr>
+                    <tr>
+                        <th>Hipervínculos</th>
+                        <td>
+                            <a href="https://www.tinkercad.com" target="_blank">Tinkercad</a> | 
+                            <a href="https://appinventor.mit.edu" target="_blank">MIT App Inventor</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Código QR</th>
+                        <td><span class="qr">[QR9] Prototipado digital</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 Ministerio de Educación Pública - Costa Rica | Dirección de Recursos Tecnológicos en Educación</p>
+            <p>Fuentes: Malla Curricular PNFT 2023, Saberes 2026, Propuesta de Módulos</p>
+        </footer>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            const contents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < contents.length; i++) {
+                contents[i].style.display = "none";
+            }
+            const buttons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            const button = document.querySelector(`[onclick="openTab('${tabName}')"]`);
+            if (button) button.classList.add("active");
+        }
+    </script>
+</body>
+</html>
